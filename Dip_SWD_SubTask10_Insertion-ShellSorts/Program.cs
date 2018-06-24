@@ -27,8 +27,9 @@ namespace Dip_SWD_SubTask10_Insertion_ShellSorts
                 List<int> listB = listA.Select(int.Parse).ToList();
                 //Then converts int list into int array (If there's a better way to do this I'd like to know about it.)
                 int[] arrayB = listB.ToArray();
-                //Sorts array using method below.
-                performInsertionSort(arrayB);
+                //Sorts array using methods below.
+                //performInsertionSort(arrayB);
+                performShellSort(arrayB);
                 foreach (var element in arrayB)
                 Console.WriteLine(element);
                 Console.WriteLine("Done");
@@ -55,6 +56,33 @@ namespace Dip_SWD_SubTask10_Insertion_ShellSorts
                 }
             }
             return inputarray;
+        }
+
+        static int[] performShellSort(int[] array)
+        {
+            int n = array.Length;
+            int gap = n / 2;
+            int temp;
+
+            while (gap > 0)
+            {
+                for (int i = 0; i + gap < n; i++)
+                {
+                    int j = i + gap;
+                    temp = array[j];
+
+                    while (j - gap >= 0 && temp < array[j - gap])
+                    {
+                        array[j] = array[j - gap];
+                        j = j - gap;
+                    }
+
+                    array[j] = temp;
+                }
+
+                gap = gap / 2;
+            }
+            return array;
         }
     }
 }
