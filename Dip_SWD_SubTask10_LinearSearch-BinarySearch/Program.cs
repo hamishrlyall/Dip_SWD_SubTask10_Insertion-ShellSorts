@@ -58,40 +58,21 @@ namespace Dip_SWD_SubTask10_LinearSearch_BinarySearch
             }
             return -1;
         }
-
-        /*static int[] FindKBiggestNumbersM(int[] testArray, int k)
+       /* public static void Every1500thNum(ref int[] x)
         {
-            int[] result = new int[k];
-            int indexMin = 0;
-            result[indexMin] = testArray[0];
-            int min = result[indexMin];
-
-            for (int i = 1; i < testArray.Length; i++)
+            int n = 1;
+            foreach ()
             {
-                if (i < k)
-                {
-                    result[i] = testArray[i];
-                    if (result[i] < min)
-                    {
-                        min = result[i];
-                        indexMin = i;
-                    }
-                }
-                else if (testArray[i] > min)
-                {
-                    min = testArray[i];
-                    result[indexMin] = min;
-                    for (int r = 0; r < k; r++)
-                    {
-                        if (result[r] < min)
-                        {
-                            min = result[r];
-                            indexMin = r;
-                        }
-                    }
-                }
+                Console.ReadLine(x[n]);
             }
-            return result;
         }*/
+
+        //int x = 0
+        //arrayB[x]
+        //x++
+        //if x % 1499 == 0
+        //{Console.ReadLine(arrayB[x]);}
+        //
+
     }
 }
