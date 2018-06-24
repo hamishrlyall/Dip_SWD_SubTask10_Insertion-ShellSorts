@@ -9,13 +9,11 @@ namespace Dip_SWD_SubTask10_Insertion_ShellSorts
 {
     class Program
     {
-        private static object strings;
-
         static void Main(string[] args)
         {
             using (var reader = new StreamReader(@"D:\Users\Hamish\source\repos\Dip_SWD_SubTask10_Insertion-ShellSorts\unsorted_numbers.csv"))
             {
-                //Reads every element in file and adds it to a list.
+                //Reads every element in file and adds it to a string list.
                 List<string> listA = new List<string>();
                 while(!reader.EndOfStream)
                 {
@@ -27,6 +25,7 @@ namespace Dip_SWD_SubTask10_Insertion_ShellSorts
                 List<int> listB = listA.Select(int.Parse).ToList();
                 //Then converts int list into int array (If there's a better way to do this I'd like to know about it.)
                 int[] arrayB = listB.ToArray();
+
                 //Sorts array using methods below.
                 //performInsertionSort(arrayB);
                 performShellSort(arrayB);
