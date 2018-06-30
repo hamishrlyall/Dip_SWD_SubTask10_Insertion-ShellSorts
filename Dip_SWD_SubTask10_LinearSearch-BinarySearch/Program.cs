@@ -28,8 +28,9 @@ namespace Dip_SWD_SubTask10_LinearSearch_BinarySearch
                 Array.Sort(arrayB);
                 //foreach (var element in arrayB)
                 //Console.WriteLine(element);
-                //Console.WriteLine(FindKBiggestNumbersM(arrayB, 5));
+                //Console.WriteLine(LinearSearch(ref arrayB, 100));
                 Console.WriteLine(LinearSearchMaxValue(ref arrayB));
+                //Console.WriteLine(Every1500thNum(arrayB));
 
 
                 Console.WriteLine("Done");
@@ -58,21 +59,25 @@ namespace Dip_SWD_SubTask10_LinearSearch_BinarySearch
             }
             return -1;
         }
-       /* public static void Every1500thNum(ref int[] x)
+        public static List<int> Every1500thNum(int[] x)
         {
+            int arrayLength = x.Length;
+            List<int> every1500thlist = new List<int>();
             int n = 1;
-            foreach ()
+            while (arrayLength > 0)
             {
-                Console.ReadLine(x[n]);
+                while (n % 1500 != 0)
+                {
+                    n++;
+                }
+                if (n % 1500 == 0)
+                {
+                    every1500thlist.Add(x[n]);
+                }
+                arrayLength--;
             }
-        }*/
-
-        //int x = 0
-        //arrayB[x]
-        //x++
-        //if x % 1499 == 0
-        //{Console.ReadLine(arrayB[x]);}
-        //
+            return every1500thlist;
+        }
 
     }
 }

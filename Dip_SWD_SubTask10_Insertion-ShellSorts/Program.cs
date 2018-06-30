@@ -25,12 +25,24 @@ namespace Dip_SWD_SubTask10_Insertion_ShellSorts
                 List<int> listB = listA.Select(int.Parse).ToList();
                 //Then converts int list into int array (If there's a better way to do this I'd like to know about it.)
                 int[] arrayB = listB.ToArray();
-
                 //Sorts array using methods below.
-                //performInsertionSort(arrayB);
-                performShellSort(arrayB);
-                foreach (var element in arrayB)
-                Console.WriteLine(element);
+               performInsertionSort(arrayB);
+                //performShellSort(arrayB);
+                //Task said every 1500th number and the highest number.
+                //Because arrays start at 0 the 1500th number would be 1499, 2999, 4499, etc. 
+                //I didn't do it that way because I liked the way this looked better.
+                Console.WriteLine(arrayB[1500]);
+                Console.WriteLine(arrayB[3000]);
+                Console.WriteLine(arrayB[4500]);
+                Console.WriteLine(arrayB[6000]);
+                Console.WriteLine(arrayB[7500]);
+                Console.WriteLine(arrayB[9000]);
+                Console.WriteLine(arrayB[10500]);
+                Console.WriteLine(arrayB[12000]);
+                Console.WriteLine(arrayB[13500]);
+                Console.WriteLine(arrayB[14999]);
+                //Console.WriteLine(Every1500thNum(arrayB));
+                //Console.WriteLine(element);
                 Console.WriteLine("Done");
                 Console.ReadKey(); 
             }
